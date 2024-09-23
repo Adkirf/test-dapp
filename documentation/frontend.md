@@ -24,6 +24,11 @@
 - [#] Initialize AppKit with siweConfig.
 - [#] Create route-protected profile page. 
 
+## Transaction Form Component
+- [x] Review the @WagmiSendTransaction.md
+- [x] Follow the steps to implement the SendTransaction component
+- [x] Add listetener to console.log transaction receipt
+
 ## Final Review
 - [x] Conduct a thorough code review
 - [x] Refactor and optimize code where necessary
@@ -31,8 +36,8 @@
 - [x] Mark all steps in this file as completed, and update the @overview.md file with the current progress.
 
 ## Questions
-- [] What is the benefit of using SIWE, instead of just fetching the wallet adress from the walletconnect modal to authenticate the user? 
-- [] Is the current code relying on Cookies?
-- [] Is the current code production ready? 
-- [] Security concerns?
+- [x] What is the benefit of using SIWE, instead of just fetching the wallet adress from the walletconnect modal to authenticate the user? 
+- [x] Is the current code relying on Cookies?
+- [x] Is the current code production ready? 
+- [x] Security concerns?
 

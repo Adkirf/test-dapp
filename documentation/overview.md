@@ -25,7 +25,7 @@ my-app/
 │   │   ├── layout/
 │   │   │   └── MainLayout.tsx
 │   │   ├── wallet/
-│   │   │   ├── ConnectButton.tsx
+│   │   │
 │   │   │   └── WalletConnectButton.tsx
 │   │   ├── transactions/
 │   │   │   └── TransactionHistory.tsx
@@ -70,34 +70,19 @@ my-app/
 - [x] Set up a local database SQLite
 - [x] Install and configure Prisma ORM for database management
 
-## Frontend Development: Setup
+## Frontend Development
 
 - [x] Create the main layout component
 - [x] Implement the home page with a brief explanation of the app
 - [x] Create a wallet connection component using WalletConnect
 - [x] Implement SIWE and One-Click Auth
-
+- [x] Implement send transaction component
 
 ## Backend Development
 
-- [ ] Set up API routes for handling transactions
-- [x] Create database schema for storing transactions and NFTs
-- [ ] Develop API endpoint for submitting transactions
-- [ ] Implement API endpoint for retrieving transaction history
-- [ ] Create API endpoints for NFT-related operations (minting, transferring)
-- [ ] Develop a mock blockchain structure in the database
-
-## Wallet Interaction
-
-- [ ] Set up event listeners for wallet connection status
-- [ ] Implement transaction signing process
-
-
-## Frontend Development: Integrate Backend
-
-- [ ] Integrate frontend components with API endpoints
-- [ ] Implement error handling and user feedback mechanisms
-- [ ] Implement a transaction history component
-- [ ] Create an NFT gallery component to display owned NFTs
-- [ ] Develop a component for sending/receiving NFTs
+- [x] Develop a structure for mock blockchain and NFT smart contract
+- [x] Create realistic interfaces for handling blockchain operations
+- [x] Set up wallet-transaction flow
+- [x] Develop API endpoints to submit transactions and simulate blockchain
+- [x] Develop API endpoints to simulate NFT smart contract  
 

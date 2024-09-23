@@ -1,12 +1,9 @@
-export type Transaction = {
-    id: string
-    amount: number
-    from: string
-    to: string
-}
-
-export type NFT = {
-    id: string
-    name: string
-    owner: string
+export interface MockTransaction {
+    hash: string;
+    from: string;
+    to: string;
+    value: number;
+    status: "pending" | "confirmed" | "failed";
+    timestamp: Date;
+    function: string;
 }

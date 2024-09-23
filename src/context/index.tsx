@@ -7,6 +7,7 @@ import { createAppKit } from '@reown/appkit/react';
 import { mainnet, arbitrum, avalanche, base, optimism, polygon } from '@reown/appkit/networks';
 import React, { type ReactNode } from 'react';
 import { cookieToInitialState, WagmiProvider, type Config } from 'wagmi';
+import { SessionProvider } from 'next-auth/react';
 
 // Set up queryClient
 const queryClient = new QueryClient();
@@ -40,10 +41,13 @@ function ContextProvider({ children, cookies }: { children: ReactNode; cookies: 
     const initialState = cookieToInitialState(wagmiAdapter.wagmiConfig as Config, cookies);
 
     return (
-        <WagmiProvider config={wagmiAdapter.wagmiConfig as Config} initialState={initialState}>
-            <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-        </WagmiProvider>
+        <SessionProvider>
+            <WagmiProvider config={wagmiAdapter.wagmiConfig as Config} initialState={initialState}>
+                <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+            </WagmiProvider>
+        </SessionProvider>
     );
 }
 
 export default ContextProvider;
+

@@ -11,22 +11,21 @@ datasource db {
 }
 
 // Define your models here
-model Transaction {
-  id        String   @id @default(uuid())
-  amount    Float
+
+
+model MockTransaction {
+  hash      String @id
   from      String
   to        String
-  createdAt DateTime @default(now())
+  value     Float
+  status    String
+  timestamp DateTime @default(now())
+  function  String
 }
 
-model NFT {
-  id     String @id @default(uuid())
-  name   String
-  owner  String
-  tokenId String @unique
-}
-
-model Wallet {
-  address String @id
-  balance Float  @default(0)
+model SmartContract {
+  address   String @id
+  balances  String  
+  owners    String   
+  details   String   
 }
