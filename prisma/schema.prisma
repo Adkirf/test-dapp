@@ -1,0 +1,32 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Define your models here
+model Transaction {
+  id        String   @id @default(uuid())
+  amount    Float
+  from      String
+  to        String
+  createdAt DateTime @default(now())
+}
+
+model NFT {
+  id     String @id @default(uuid())
+  name   String
+  owner  String
+  tokenId String @unique
+}
+
+model Wallet {
+  address String @id
+  balance Float  @default(0)
+}
